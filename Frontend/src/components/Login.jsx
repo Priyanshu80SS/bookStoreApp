@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
+import axios from "axios";
+import toast from "react-hot-toast";
 
 function Login() {
   const {
@@ -9,7 +11,31 @@ function Login() {
   } = useForm();
 
   const onSubmit = async (data) => {
-    console.log(data);
+    try {
+      const user = {
+        email: data.email,
+        password: data.password,
+      };
+      await axios
+        .post("http://localhost:4001/users/login", user)
+        .then((res) => {
+          console.log(res.data);
+          if (res.data) {
+            toast.success("Login Sucessfull");
+            document.getElementById("my_modal_3").close();
+            setTimeout(() => {
+              window.location.reload();
+              localStorage.setItem("Users", JSON.stringify(res.data.user));
+            }, 1000);
+          }
+        });
+    } catch (error) {
+      if (error.response) {
+        console.log(error);
+        toast.error("Error: " + error.response.data.message);
+        setTimeout(() => {}, 2000);
+      }
+    }
   };
   return (
     <div>

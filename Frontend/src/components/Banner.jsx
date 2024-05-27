@@ -28,7 +28,7 @@ const Banner = () => {
             </label>
           </div>
           <button className="  btn mt-6 btn-secondary bg-pink-500  hover:bg-pink-700 duration-300 ">
-            Secondary
+            Get Started
           </button>
         </div>
         <div className="order-1 w-full md:w-1/2 mt-16 md:mt-40   md:px-8">
