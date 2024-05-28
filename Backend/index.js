@@ -31,6 +31,10 @@ try {
   console.log("Error", error);
 }
 
+app.get("/",(req,res)=>{
+    res.json("Hello backend side")
+})
+
 //defining routes
 
 app.use("/book", bookRoute);
