@@ -22,7 +22,7 @@ function Signup() {
       password: data.password,
     };
     await axios
-      .post("deploy-mern-api-iota.vercel.app/users/signup", userInfo)
+      .post("https://deploy-mern-api-iota.vercel.app/users/signup", userInfo)
       .then((res) => {
         console.log(res.data);
         if (res.data) {
