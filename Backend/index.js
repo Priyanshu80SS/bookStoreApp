@@ -11,7 +11,7 @@ const app = express();
 app.use(express.json());
 app.use(cors(
   {
-    origin: ["https://deploy-mern-api-1whq.vercel.app"],
+    origin: ["https://book-store-client-ruby.vercel.app"],
     mthods:["POST","GET"],
     credentials:true
   }
