@@ -17,7 +17,7 @@ function Login() {
         password: data.password,
       };
       await axios
-        .post("http://localhost:4001/users/login", user)
+        .post("deploy-mern-api-iota.vercel.app/users/login", user)
         .then((res) => {
           console.log(res.data);
           if (res.data) {
