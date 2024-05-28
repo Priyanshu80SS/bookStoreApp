@@ -11,7 +11,7 @@ const app = express();
 app.use(express.json());
 app.use(cors(
   {
-    origin: ["https://book-store-client-ruby.vercel.app"],
+    origin: ["https://bookstoreappclient.vercel.app"],
     mthods:["POST","GET"],
     credentials:true
   }
