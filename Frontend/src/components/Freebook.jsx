@@ -11,7 +11,7 @@ const Freebook = () => {
   useEffect(() => {
     const getBooks = async () => {
       try {
-        const res = await axios.get("https://deploy-mern-api-iota.vercel.app/book");
+        const res = await axios.get("https://bookstoreapi-omega.vercel.app/book");
         const filteredData = res.data.filter(
           (data) => data.category === "free"
         );
