@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(cors(
   {
     origin: ["https://bookstoreappclient.vercel.app"],
-    mthods:["POST","GET"],
+    methods:["POST","GET"],
     credentials:true
   }
 ));
